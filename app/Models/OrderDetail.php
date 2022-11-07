@@ -15,6 +15,7 @@ class OrderDetail extends Model
         'product_id',
         'quantity',
         'price',
+        'discount',
         'total',
     ];
 

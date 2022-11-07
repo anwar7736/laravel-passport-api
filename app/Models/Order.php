@@ -13,7 +13,10 @@ class Order extends Model
         'user_id',
         'invoice_no',
         'amount',
+        'charge',
+        'discount',
         'total',
+        'status',
     ];
 
     public function user()

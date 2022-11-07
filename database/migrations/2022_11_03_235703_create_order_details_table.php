@@ -23,7 +23,7 @@ class CreateOrderDetailsTable extends Migration
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');             
             $table->integer('quantity');
             $table->double('price', 8, 2);
-            $table->double('discount', 8, 2)->default(0);
+            $table->double('discount', 8, 2)->nullable()->default(0);
             $table->double('total', 8, 2);
             $table->timestamps();
         });

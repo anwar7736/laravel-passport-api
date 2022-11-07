@@ -19,8 +19,8 @@ class CreateOrdersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('invoice_no')->unique();
             $table->double('amount', 8, 2);
-            $table->double('charge', 8, 2)->default(0);
-            $table->double('discount', 8, 2)->default(0);
+            $table->double('charge', 8, 2)->nullable()->default(0);
+            $table->double('discount', 8, 2)->nullable()->default(0);
             $table->double('total', 8, 2);
             $table->enum('status', ['ordered', 'pending', 'delivered'])->default('ordered');
             $table->timestamps();
